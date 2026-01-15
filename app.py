@@ -18,7 +18,7 @@ class Block:
         return sha256(text.encode("ascii")).hexdigest()
     
     def mine_block(self):
-        target_letter = 'manoj'  # Ethereum-like difficulty, looking for a hash starting with 'm'
+        target_letter = 'bee'  # Ethereum-like difficulty, looking for a hash starting with 'm'
         for nonce in range(MAX_NONCE):
             block_content = str(self.index) + str(self.transactions) + self.previous_hash + str(nonce)
             block_hash = self.SHA256(block_content)
@@ -107,4 +107,5 @@ def add_transaction():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
